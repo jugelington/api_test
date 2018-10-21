@@ -7,9 +7,9 @@ const PersonalityInsightsV3 = require('watson-developer-cloud/personality-insigh
 
 const personalityInsights = new PersonalityInsightsV3({
   version: '2017-10-13',
-  username: PI_USERNAME,
-  password: PI_PASSWORD,
-  url: PI_URL
+  username: process.env.PI_USERNAME,
+  password: process.env.PI_PASSWORD,
+  url: process.env.PI_URL
 });
 
 module.exports = personalityInsights;
