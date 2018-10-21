@@ -1,0 +1,24 @@
+body {
+  background-color: lightblue;
+}
+
+header {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.emotions-box {
+  display: flex;
+}
+
+.picture-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emotion {
+  margin: 5px;
+  border: orangered 2px solid;
+
+  text-align: center;
+}

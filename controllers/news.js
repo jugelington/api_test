@@ -7,10 +7,12 @@ exports.getNewsByTerm = (req, res, next) => {
 
   getInsightsByTopic(topic)
     .then(data => {
-      searchPixaBay(topic).then(url => {
-        newData = data.personality;
-        res.render('index.ejs', { topic, newData, url });
-      });
+      searchPixaBay(topic)
+        .then(url => {
+          newData = data.personality;
+          res.render('index.ejs', { topic, newData, url });
+        })
+        .catch(next);
     })
     .catch(next);
 };
