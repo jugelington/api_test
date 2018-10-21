@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="/Users/juge/Documents/Northcoders/Course/Backend 2/BE2-emotional-tweets/public/main.css" /> -->
+
+<style>
+  body {
+    background-color: lightblue
+  }
+
+  header {
+    width: 500px;
+    margin: 0 auto;
+
+  }
+
+  .emotions-box {
+    display: flex;
+  }
+
+  .picture-box {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .emotion {
+    margin: 5px;
+    border: orangered 2px solid;
+
+    text-align: center
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Insights</title>
+</head>
+
+<body>
+  <header>
+    <h1>here are the Insights about
+      <%= topic %> <br>
+  </header>
+  <div class='picture-box'>
+    <% url.forEach(picture => { %>
+    <img src=<%=picture %> height=500>
+    <% }) %>
+    </h1>
+  </div>
+
+  <br>
+  <div class='emotions-box'>
+    <% newData.forEach(obj => { %>
+    <%- include partials/emotions %>
+    <% } )%>
+  </div>
+</body>
+
+</html>
